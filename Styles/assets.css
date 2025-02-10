@@ -1,0 +1,356 @@
+body{
+    font-family: 'Tauri', Courier, monospace;
+    background-color: rgb(231, 231, 231);
+    background-image: url(/Images\,\ Videos/Fabric004_4K-PNG_Color.png);
+    background-attachment: fixed;
+}
+.topbar{
+    display: inline;
+    position: fixed;
+    inset-inline-start: 0; /*left*/
+    inset-inline-end: 0; /*right*/
+    inset-block-start: 0; /*top*/
+    block-size: 75px; /*height*/
+    background-color: #00c3ff;
+    margin-block-start: 5px;
+    margin-inline-start: 5px;
+    margin-inline-end: 5px;
+    border-radius: 10px;
+}
+
+.cybrone{
+    block-size: 30px;
+    position: absolute;
+    inset-block-start: 20px;
+    inset-inline-start: 70px;
+}
+
+.create{
+    background: none;
+    border: none;
+    block-size: 50px;
+    inline-size: 50px;
+    position: absolute;
+    inset-inline-start: 5px;
+    inset-block-start: 10px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: color 0.25s;
+}
+
+.create:hover{
+    color: white;
+}
+
+.create:active{
+    opacity: 0.8;
+    color: white;
+}
+
+.create-image{
+    block-size: 50px;
+    inline-size: 50px;
+}
+
+.search{
+    background-color: none;
+    border: none;
+    block-size: 40px;
+    inline-size: 350px;
+    border-radius: 20px;
+    position: absolute;
+    inset-block-start: 15px;
+    inset-inline-start: 455px;
+    text-align: start;
+    font-size: 16px;
+    padding-inline-start: 10px;
+    transition: 0.3s;
+}
+
+.search::placeholder{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    inset-inline-start: 120px;
+    font-weight: lighter;
+    font-family: 'Tauri', 'Arial Narrow', Arial, sans-serif;
+}
+
+.search:focus{
+    transform: scale(1.05,1);
+    outline: none;
+}
+
+.search-button{
+    position: absolute;
+    inset-block-start: 9px;
+    inset-inline-start: 810px;
+    background: none;
+    border: none;
+    block-size: 51px;
+    inline-size: 50px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.search-image{
+    background: none;
+    border: none;
+    block-size: 50px;
+    inline-size: 50px; 
+    opacity: 1;
+    transition: opacity 0.5s;
+    transition: color 0.25s;
+    border-radius: 20px;
+}
+
+.search-button:hover{
+    color: white;
+}
+
+.search-button:active{
+    opacity: 0.8;
+    color: white;
+}
+
+.home{
+    block-size: 40px;
+    inline-size: 95px;
+    position: absolute;
+    inset-block-start: 15px;
+    inset-inline-start: 900px;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    font-family:'Tauri', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #252525;
+    color: #00c3ff;
+    transition: 0.3s;
+}
+
+.home:hover{
+    border-radius: 20px;
+    transform: scale(1.05, 1.05);
+    -webkit-box-shadow: 0px 0px 9px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 1px 1px light #00c3ff;
+    box-shadow: 0px 0px 2px 2px light #00c3ff}
+
+.home:active{
+    opacity: 0.7;
+    -webkit-box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 1px 1px light #00c3ff;
+    box-shadow: 0px 0px 2px 2px light #00c3ff}
+
+.assets{
+    block-size: 40px;
+    inline-size: 95px;
+    position: absolute;
+    inset-block-start: 15px;
+    inset-inline-start: 1025px;
+    border: none;
+    font-family:'Tauri', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 1;
+    background-color: #252525;
+    color: #00c3ff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.assets:hover{
+    transform: scale(1.05, 1.05);
+    -webkit-box-shadow: 0px 0px 9px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 1px 1px light #00c3ff;
+    box-shadow: 0px 0px 2px 2px light #00c3ff}
+
+.assets:active{
+    opacity: 0.7;
+    -webkit-box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 1px 1px light #00c3ff;
+    box-shadow: 0px 0px 2px 2px light #00c3ff}
+
+.about{
+    block-size: 40px;
+    inline-size: 95px;
+    position: absolute;
+    inset-block-start: 15px;
+    inset-inline-start: 1150px;
+    border: none;
+    font-family:'Tauri', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 1;
+    background-color: #252525;
+    color: #00c3ff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.about:hover{
+    border-radius: 20px;
+    transform: scale(1.05, 1.05);
+    -webkit-box-shadow: 0px 0px 9px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 1px 1px light #00c3ff;
+    box-shadow: 0px 0px 2px 2px light #00c3ff}
+
+.about:active{
+    opacity: 0.7;
+    -webkit-box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 1px 1px light #00c3ff;
+    box-shadow: 0px 0px 2px 2px light #00c3ff}
+
+#products{
+    background-color: rgb(23, 23, 23);
+    inline-size: 100% auto;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 25px;
+    padding-block-start: 20px;
+    padding-block-end: 20px;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+#productSection{
+    display: inline;
+    margin-block-start: 75px;
+    inline-size: 100% auto;
+}
+
+.dropMenu{
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0px, 80px);
+    border-radius: 10px;
+    background-color: #00c3ff;
+    inline-size: 80px;
+    z-index: 1000;
+    overflow: hidden; /* Ensure content doesn't overflow during transition */
+    block-size: 0; /* Start with height 0 */
+    transition: height 0.7s; /* Smooth height transition */
+}
+
+.dropMenu.open {
+    block-size: 250px; /* Let the content determine the height */
+}
+
+.dropMenu button{
+    block-size: 50px;
+    inline-size: 50px;
+    border-radius: 30%;
+    background: rgb(38, 38, 38);
+    border: none;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #00c3ff;
+    margin-block-start: 10px;
+}
+
+.dropMenu #log-out{
+    margin-block-end: 10px;
+}
+
+.dropMenu button:hover{
+    transform: scale(1.05, 1.05);
+    -webkit-box-shadow: 0px 0px 9px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 1px 1px light #00c3ff;
+    box-shadow: 0px 0px 2px 2px light #00c3ff}
+
+.dropMenu button:active{
+    transform: scale(1.05, 1.05);
+    -webkit-box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px -1px -1px light #00c3ff;
+    box-shadow: 0px 0px -2px -2px light #00c3ff}
+
+.dropMenu ion-icon{
+    transform: translate(0px, 2px);
+    block-size: 30px;
+    inline-size: 30px;
+}
+
+
+.logo-container{
+    display: flex;
+    margin-block-start: 15%;
+    margin-inline-start: 40%;
+}
+
+.name{
+    margin-inline-start: 40%;
+    color: #00c3ff;
+    transition: color 0.25s;
+}
+
+.logo{
+    block-size: 250px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 8px 9px #00c3ff;
+    -moz-box-shadow: 0px 0px 9px 5px light #00c3ff;
+    box-shadow: 0px 0px 8px 2px light #00c3ff}
+
+/* Button Styles */
+.product-button {
+    background-color: #000000; /* Green */
+    border: 2px solid #00c3ff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6.5px 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    block-size: 300px;
+    inline-size: 250px;
+    transition: 0.3s ease-in-out;
+}
+
+.product-button:hover {
+    background-color: #171717;
+    -webkit-box-shadow: 0px 0px 8px 9px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 9px 5px light rgb(0, 0, 0);
+    box-shadow: 0px 0px 8px 2px light rgb(0, 0, 0);
+}
+
+.product-image {
+    margin-block-start: 5px;
+    max-inline-size: 100%;
+    block-size: auto;
+    margin-block-end: 10px;
+    border-radius: 15px;
+    inline-size: inherit;
+    block-size: 130px;
+}
+
+.buy{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy:hover{
+    transform: scale(1.05);
+}
+
+.product-button p{
+    color: #00c3ff;
+    font-family: 'Tauri', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.product-button button{
+    inline-size: 100%;
+    block-size: 40px;
+    margin-block-start: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: #00c3ff;
+    color: white;
+    font-family: 'Tauri', Courier, monospace;
+}
