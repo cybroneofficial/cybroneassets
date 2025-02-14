@@ -188,6 +188,7 @@ body{
 .productImages{
     background-color: white;
     margin-block-start: 30px;
+    margin-inline-start: -25px;
     border-radius: 25px;
     block-size: 400px;
     inline-size: 750px;
@@ -213,7 +214,7 @@ body{
 
 .ProductInfo span{
     font-family: 'Tauri', Courier, monospace;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .productName{
@@ -222,13 +223,12 @@ body{
 
 .ProductInfo{
     background-color: white;
-    block-size: 580px;
-    inline-size: 500px;
+    block-size: 200px;
+    inline-size: 360px;
     z-index: -100;
     border-radius: 25px;
     transform: translate(800px);
-    margin-block-start: -580px;
-    overflow-y: scroll;
+    margin-block-start: -400px;
 }
 
 #paypal-button-container{
@@ -240,6 +240,7 @@ h1 {
     color: #333;
 }
 p {
+    margin-block-start: 30px;
     color: #666;
     font-size: 20px;
 }

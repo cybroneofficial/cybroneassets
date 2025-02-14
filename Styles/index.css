@@ -1,6 +1,7 @@
 body{
     font-family: 'Tauri', Courier, monospace;
     background-color: rgb(38, 38, 38);
+    background-image: url("Images, Videos/Fabric004_4K-PNG_Color.png");
     background-attachment: fixed;
 }
 .topbar{
