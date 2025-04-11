@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            inset-block-end: 0;
+            inline-size: 100%;
+        }
+        /* Button Styles */
+        .product-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .product-button:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+        .product-image {
+            max-inline-size: 100%;
+            block-size: auto;
+            margin-block-end: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Simple Website</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section id="productSection">
+        <h2>Products</h2>
+        <!-- Buttons will be dynamically generated here -->
+    </section>
+
+    <footer>
+        &copy; 2024 My Simple Website. All rights reserved.
+    </footer>
+
+    <script>
+        // Define an array of product objects
+        const products = [
+            { id: "footballBtn", name: "Football", price: (Math.random() * 5).toFixed(2), image: "/Images, Videos/Fabric004_4K-PNG_Color.png" },
+            { id: "basketballBtn", name: "Basketball", price: (Math.random() * 5).toFixed(2), image: "/Images, Videos/Fabric004_4K-PNG_Color.png" },
+            { id: "tennisRacketBtn", name: "Tennis Racket", price: (Math.random() * 5).toFixed(2), image: "/Images, Videos/Fabric004_4K-PNG_Color.png" },
+            { id: "golfClubsBtn", name: "Golf Clubs", price: (Math.random() * 5).toFixed(2), image: "/Images, Videos/Fabric004_4K-PNG_Color.png" },
+            { id: "baseballBatBtn", name: "Baseball Bat", price: (Math.random() * 5).toFixed(2), image: "/Images, Videos/Fabric004_4K-PNG_Color.png" }
+        ];
+
+        // Function to generate buttons for each product
+        function generateProductButtons() {
+            const productSection = document.getElementById("productSection");
+            products.forEach(product => {
+                const button = document.createElement("button");
+                button.innerHTML = `<img src="${product.image}" class="product-image"><br>${product.name} - €${product.price}`;
+                button.id = product.id;
+                button.className = "product-button"; // Add the class for styling
+                button.onclick = function() {
+                    // Redirect to order page with product name as query parameter
+                    window.location.href = `Test2.html?productName=${encodeURIComponent(product.name)}&price=${product.price}`;
+                };
+                productSection.appendChild(button);
+            });
+        }
+
+        // Call the function to generate buttons
+        generateProductButtons();
+    </script>
+
+</body>
+</html>

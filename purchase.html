@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="Styles/purchase.css">
+    <link rel="icon" href="Images, Videos/0015-modified.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tauri&display=swap">
+</head>
+<body>
+    <div class="topbar">
+        <button class="create"><ion-icon name="person-circle-sharp" class="create-image"></ion-icon></button>
+        <img src="/Images, Videos/cybrone-removebg.png" class="cybrone">
+        <Input type="search" placeholder="Search assets" class="search" id="js-search">
+        <button class="search-button"><ion-icon name="search-circle" class="search-image"></ion-icon></button>
+        <button class="home" id="js-home">Home</button>
+        <button class="assets" id="js-assets">Assets</button>
+        <button class="about" id="js-about">About us</button>
+    </div>
+    <div class="container">
+        <div class="productImages">
+            <img id="productImage" src="" alt="Product Image">
+        </div>
+        <div class="ProductInfo">
+            <p id="productName"></p>
+            <p id="productPrice"></p>
+            <p id="ProductTags"></p>
+        </div>
+        <button>Buy now</button>
+        <button>Add to cart</button>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    <script src="Scripts/purchase.js"></script>
+</body>
+</html>

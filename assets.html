@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybrone Assets</title>
+    <link rel="stylesheet" href="Styles/assets.css">
+    <link rel="icon" href="Images, Videos/0015-modified.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tauri&display=swap">
+</head>
+<body>
+    <div class="topbar">
+        <button class="create" id="createAccount"><ion-icon name="person-circle-sharp" class="create-image"></ion-icon></button>
+        <div class="dropMenu">
+            <button id="edit-profile"><ion-icon name="person-outline"></ion-icon></ion-icon></button>
+            <button id="cart"><ion-icon name="cart-outline"></ion-icon></button>
+            <button id="contact"><ion-icon name="call-outline"></ion-icon></button>
+            <button id="log-out"><ion-icon name="log-out-outline"></ion-icon></button>
+        </div>
+        <img src="Images, Videos/cybrone-removebg.png" class="cybrone">
+        <Input type="search" placeholder="Search assets" class="search" id="js-search">
+        <button class="search-button"><ion-icon name="search-circle" class="search-image" ></ion-icon></button>
+        <button class="home" id="js-home">Home</button>
+        <button class="assets" id="js-assets">Assets</button>
+        <button class="about" id="js-about">About us</button>
+    </div>
+    <div id="productSection">
+        <div class="items">
+            <div class="logo-container">
+                <img src="Images, Videos/0015-modified.png" class="logo">
+            </div>
+            <h1 class="name">CYBRONE ASSETS</h1>
+            <div id="products">
+                <!-- Buttons will be dynamically generated here -->
+            </div>
+        </div>
+    <script src="Scripts/assets.js"></script>
+    <script src="Scripts/products.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    <py-script></py-script>
+</body>
+</html>

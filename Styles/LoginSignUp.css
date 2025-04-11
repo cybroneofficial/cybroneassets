@@ -1,0 +1,249 @@
+@import url(https://fonts.googleapis.com/css2?family=Tauri&display=swap);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tauri', Courier, monospace;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: 100vh;
+    background-color: rgb(38, 38, 38);
+    background-attachment: fixed;
+}
+
+.glassFX{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    inline-size: 470px;
+    padding: 20px;
+    block-size: 450px;
+    transition: height 0.4s;
+    will-change: height;
+    overflow: hidden;
+}
+
+.login {
+    position: absolute;
+    inline-size: 91%;
+    inset-block-start: 0; 
+    inset-inline-start: 4.5%;
+    transition: left 0.4s;
+    will-change: left;
+}
+
+
+.login-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    inline-size: 440px;
+    block-size: 480px;
+    padding: 30px;   
+}
+
+.login-header{
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.login-header header{
+    color: #00c3ff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.input-box .input-field{
+    inline-size: 100%;
+    block-size: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-block-end: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgb(0, 0, 0, 0.5);
+    outline: none;
+    transition: 0.3s;
+}
+
+#logPassword{
+    padding-inline-end: 30px;
+}
+
+::placeholder{
+     font-weight: 500;
+     color: #222;
+}
+
+.input-field:focus{
+    transform: scale(1.05, 1);
+}
+
+.forgot{
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 40px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #000;
+}
+
+.eye-area{
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 90%;
+}
+
+.eye-area2{
+    position: absolute;
+    inset-block-start: 57.5%;
+    inset-inline-start: 90%;
+}
+
+
+.eye-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+ion-icon{
+    position: absolute;
+    color: #000;
+    cursor: pointer;
+    background-color: white;
+    padding: 3px;
+}
+
+#eye, #eye-2{
+    opacity: 1;
+    color: #000;
+    block-size: 25px;
+    inline-size: 25px;
+}
+
+#eye-slash, #eye-slash-2{
+    opacity: 0;
+    color: #000;
+    block-size: 25px;
+    inline-size: 25px;
+}
+
+#check{
+    margin-inline-end: 10px;
+    accent-color: #00c3ff}
+
+#RegCheck{
+    margin-inline-end: 10px;
+    accent-color: #00c3ff}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+section a{
+    color: #000;
+}
+
+.input-submit{
+    position: relative;   
+}
+
+.submit-btn{
+    inline-size: 100%;
+    block-size: 60px;
+    background: #00c3ff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-submit label{
+    position: absolute;
+    inset-block-start: 45%;
+    inset-inline-start: 50%;
+    color: #222;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background: #00c8ff;
+    transform: scale(1.05,1);
+}
+
+.sign-up-link{
+    text-align: center;
+    font-size: 15px;
+    margin-block-start: 20px;
+}
+
+.sign-up-link button{
+    color: #000;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-up-link button:hover{
+    text-decoration: underline;
+}
+
+.register{
+    transform: translate(550px, 0px);
+    position: absolute;
+    inline-size: 91%;
+    inset-block-start: 0; 
+    inset-inline-start: 4.5%;
+    transition: left 0.4s;
+    will-change: left;
+}
+
+.register-header{
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.register-header header{
+    color: #00c3ff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#registerPassword{
+    padding-inline-end: 70px;
+}
+
+#eye2, #eye2-2{
+    opacity: 1;
+    color: #000;
+    block-size: 25px;
+    inline-size: 25px;
+}
+
+#eye-slash2, #eye-slash2-2{
+    opacity: 0;
+    color: #000;
+    block-size: 25px;
+    inline-size: 25px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Register</title>
+    <link rel="stylesheet" href="Styles/LoginSignUp.css">
+    <link rel="icon" href="Images, Videos/0015-modified.png">
+</head>
+<body>
+    <div class="glassFX" id="js-glass">
+        <div class="login" id="js-login">
+            <div class="login-header">
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" autocomplete="off" required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="logPassword" placeholder="Password" autocomplete="off" required>
+                <div class="eye-area">
+                    <div class="eye-box" onclick="myLogPassword()">
+                        <ion-icon name="eye-outline" id="eye"></ion-icon>
+                        <ion-icon name="eye-off-outline" id="eye-slash"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="forgot">
+                <section>
+                    <input type="checkbox" id="check">
+                    <label for="check">Remember me</label>
+                </section>
+                <section>
+                    <a href="#">Forgot Password</a>
+                </section>
+            </div>
+            <div class="input-submit">
+                <button class="submit-btn" id="submit"></button>
+                <label for="submit">Log In</label>
+            </div>
+            <div class="sign-up-link">
+                <p>Don't have an account?<button onclick="registration()">Sign Up</button></p>
+            </div>
+        </div>
+        <div class="register" id="js-register">
+            <div class="register-header">
+                <header>Register</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username" autocomplete="off" required>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" autocomplete="off" required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="registerPassword" placeholder="Password" autocomplete="off" required>
+                <div class="eye-area2">
+                    <div class="eye-box" onclick="myRegPassword()">
+                        <ion-icon name="eye-outline" id="eye2"></ion-icon>
+                        <ion-icon name="eye-off-outline" id="eye-slash2"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="forgot">
+                <section>
+                    <input type="checkbox" id="RegCheck">
+                    <label for="RegCheck">Remember me</label>
+                </section>
+            </div>
+            <div class="input-submit">
+                <button class="submit-btn" id="RegSubmit"></button>
+                <label for="RegSubmit">Sign Up</label>
+            </div>
+            <div class="sign-up-link">
+                <p>Do have an account?<button onclick="login()">Log in</button></p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="Scripts/loginRegisterFRNThandler.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 20px;
+        }
+        .back-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-block-start: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+        img {
+            max-inline-size: 100%;
+            margin-block-start: 20px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1/confetti.min.js"></script>
+</head>
+<body>
+    <div id="paypal-button-container"></div>
+    <div class="container">
+        <h1>Yay, order successful!</h1>
+        <p>Your order for <span id="productName"></span> has been placed.</p>
+        <img id="productImage" src="" alt="Product Image">
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=AU3bmv4Rbrn7YBh0ZlkMf6CEQ-W_3NObeUlvOrk-04J58qoX3Eo7YkElrL5scbNoDWlAVqZMIZvhdWij"></script>
+    <script>
+        // Function to extract query parameters from URL
+        function getQueryParams() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            return {
+                productName: urlParams.get('productName'),
+                price: urlParams.get('price'),
+                imageUrl: urlParams.get('image') // Add imageUrl parameter
+            };
+        }
+
+        // Function to display the product name and image
+        function displayProductInfo() {
+            const queryParams = getQueryParams();
+            const productNameElement = document.getElementById('productName');
+            productNameElement.textContent = queryParams.productName + " - €" + queryParams.price;
+            const productImageElement = document.getElementById('productImage');
+            productImageElement.src = queryParams.imageUrl; // Set image source
+        }
+
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                // This function sets up the details of the transaction, including the amount and line item details.
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '10.00' // Set the amount to charge
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                // This function captures the funds from the transaction.
+                return actions.order.capture().then(function(details) {
+                    // Call your server to save the transaction
+                    // You can also display a confirmation message to the user
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                });
+            }
+        }).render('#paypal-button-container');
+        // Function to handle back button click
+        function goBack() {
+            window.history.back();
+        }
+
+        // Function to trigger confetti animation
+        function triggerConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+
+        // Display product info and trigger confetti animation after page load
+        window.onload = function() {
+            displayProductInfo();
+            triggerConfetti();
+        };
+    </script>
+</body>
+</html>
